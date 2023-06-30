@@ -1,0 +1,95 @@
+*{
+    margin: 5px;
+    padding: 0;
+}
+body{
+    width: 8.4in;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+header #watermark{
+    height: 500;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    opacity: 15%;
+}
+header{
+    position: fixed;
+    top: 0;
+    font-family: Calibri, sans-serif;
+}
+header #header-template{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2%;
+    z-index: 9999;
+}
+
+table{
+    width: 100%;
+}
+
+header .assessment-header{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+}
+
+header .student-info{
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    font-family: Calibri, sans-serif;
+    font-size: 12px;
+}
+
+header .header-title{
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+    font-size: 12px;
+}
+
+header .header-sub-title{
+    font-family: Calibri, sans-serif;
+    font-size: 10px;
+}
+
+main{
+    width: 768px;
+    position: absolute;
+    top: 20%;
+}
+
+main .schedules-wrapper{
+    width: 100%;
+}
+
+main .schedules-wrapper .sched-tbl{
+    font-size: 12px;
+    margin-bottom: .8rem;
+}
+
+main .schedules-wrapper .sched-tbl{
+  border-collapse: collapse;
+}
+
+main .schedules-wrapper .sched-tbl .sched-th, .sched-td {
+  border: 1px solid black;
+  padding: 3px;
+  font-size: 10px;
+}
+
+main .schedules-wrapper .sched-tbl .sched-td {
+  font-size: 10px;
+}
+
+main .table-title{
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 10px;
+}
