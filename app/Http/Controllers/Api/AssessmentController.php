@@ -157,8 +157,8 @@ class AssessmentController extends Controller
             DB::beginTransaction();
 
             $student_config = self::check_assessment($request->enrolment_id);
-            // Remove balances
             
+            // Remove balances
             $balances = CashierBalance::where([['account_id', $student_config['stud_id']],['sem_id', $student_config['sem_id']],['ay_id', $student_config['ay_id']]]);
             $bal_ids = $balances->pluck('bal_id');
             $oop_ids = PaymentRequest::whereIn('bal_id', $bal_ids)->pluck('bal_id');
@@ -184,7 +184,9 @@ class AssessmentController extends Controller
                     $procstudenttotalbalancepersem = StudentBalance::procstudenttotalbalancepersem($student_config['stud_id']);
                     self::distribute($procstudenttotalbalancepersem, $amount, $student_config['stud_id'], $collection->col_id, false);
                 } else {
+
                     $collection->delete();
+
                 }
             }
 
